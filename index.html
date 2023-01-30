@@ -2,12 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+
+    <title>Custom Select Menu</title>
+
+    <link rel="icon" type="image/png" href="./images/custom-select-menu-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <script defer src="./scripts/main.js"></script>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+  <body class="fz-600 text-scondary-900 bg-primary-50">
+    <main class="main-grid | container p-v-400">
+      <form class="form" action="#" method="post">
+        <div class="form-group">
+          <label for="color" class="form-label">Pick a Color</label>
+          <select class="form-field" name="color" id="color" required>
+            <option value="">- Colors -</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="pink">Pink</option>
+            <option value="purple">Purple</option>
+            <option value="white">White</option>
+            <option value="black">Black</option>
+            <option value="gray">Gray</option>
+            <option value="brown">Brown</option>
+            <option value="maroon">Maroon</option>
+            <option value="lime">Lime</option>
+            <option value="cyan">Cyan</option>
+            <option value="magenta">Magenta</option>
+          </select>
+        </div>
+
+        <div class="btn-container">
+          <button class="btn btn-form" type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
   </body>
 </html>
