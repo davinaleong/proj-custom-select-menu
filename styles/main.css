@@ -247,6 +247,7 @@ a:where(:hover, :focus, :focus-visible) {
   --btn-hover-border-clr: var(--clr-secondary-700);
 
   --btn-padding: var(--size-v-200) var(--size-v-400);
+  --btn-border-radius: 0;
 }
 
 /** Content - Layout **/
@@ -256,7 +257,6 @@ a:where(:hover, :focus, :focus-visible) {
 
 .form-label {
   display: block;
-  margin-bottom: var(--size-v-200);
 }
 
 .form-field {
@@ -267,9 +267,71 @@ a:where(:hover, :focus, :focus-visible) {
   padding: var(--size-v-50);
   color: var(--clr-secondary-50);
   background-color: var(--clr-secondary-800);
-  border-radius: var(--size-v-50);
+  min-width: 15em;
 }
 
+.custom-select__field {
+  cursor: pointer;
+  position: relative;
+  min-width: 15em;
+}
+
+.custom-select__input {
+  color: var(--clr-secondary-50);
+  background-color: var(--clr-secondary-800);
+  min-height: 2em;
+  position: relative;
+  padding: 0.25em 1.75em 0.25em 0.25em;
+}
+
+.custom-input__arrow {
+  width: 1.5em;
+  height: 100%;
+  pointer-events: none;
+  display: block;
+  background-color: var(--clr-secondary-900);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.custom-input__arrow::before {
+  --input-arrow-size: 0.3em;
+
+  content: "";
+  transform: translate(-50%, -50%);
+  border-left: var(--input-arrow-size) solid transparent;
+  border-right: var(--input-arrow-size) solid transparent;
+  border-top: var(--input-arrow-size) solid var(--clr-secondary-50);
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custon-select__selection {
+  max-height: 10em;
+  overflow-y: auto;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.custom-select__selection__item {
+  padding: 0.25em;
+  min-height: 2em;
+  color: var(--clr-secondary-50);
+  background-color: var(--clr-secondary-800);
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-select__selection__item:hover {
+  color: var(--clr-secondary-900);
+  background-color: var(--clr-primary-500);
+}
 /** Content - End **/
 
 /** Utility **/
